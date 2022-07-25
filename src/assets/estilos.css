@@ -1,0 +1,166 @@
+@import "./reset.css";
+@import url('https://fonts.googleapis.com/css2?family=Recursive:wght@300;400;500;600;700;800;900&family=Righteous&display=swap');
+
+
+*{
+    box-sizing: border-box;
+}
+body{
+    background-color: #FB6b6b;
+}
+.flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.body-questions{
+    flex-direction: column;
+    height: 400px;
+    overflow-y: scroll;
+}
+.Home{
+    height: auto;
+    width: auto;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+
+.Home img{
+    width: 136px;
+    height: 161px;
+}
+
+.Home p {
+    width: 257px;
+    height: 59px;
+    font-family: 'Righteous';
+    font-style: normal;
+    font-weight: 400;
+    font-size:36px;
+    line-height: 45px;
+    margin: 13px 0 30px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #FFFFFF;
+}
+
+.Home button{
+    width: 246px;
+    height: 54px;
+    background-color: #FFFFFF;
+    border: 1px solid;
+    border-radius: 5px;
+    font-family: 'Recursive';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+    color: #D70900;
+}
+.Header{
+    height: 153px;
+    min-height: 153px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Header img{
+    width: 52px;
+    height: 60px;
+}
+
+.Header p{
+    width: 204px;
+    height: 44px;
+    font-family: 'Righteous';
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #FFFFFF;
+}
+.footer{
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom:0;
+    background-color: #FFFFFF;
+    width: 100%;
+    padding: 25px 115px;
+    font-size: 18px; 
+    color: black;
+    position: fixed; 
+    text-align: center;
+}
+
+.Card{
+    width: 300px;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    color: black;
+    margin: 10px 0;
+    cursor: pointer;
+    font-family: 'Recursive', sans-serif;
+    padding: 0 20px;
+    border-radius: 5px;
+}
+.Card-grande, .reposta-avaliacao{
+    width: 300px;
+    height: 130px;
+    justify-content: space-between;
+    background-color: white;
+    color: black;
+    margin: 10px 0;
+    cursor: pointer;
+    font-family: 'Recursive', sans-serif;
+    padding: 10px;
+    position: relative;
+    border-radius: 5px;
+}
+.Card-grande img{
+    position: absolute;
+    bottom: 10px; 
+    right: 20px;
+}
+.botoes-resposta{
+    justify-content: space-around; 
+    position: absolute;
+    bottom: 10px;
+    width: 100%;   
+    right: 3px;  
+}
+.botao-vermelho, .botao-amarelo, .botao-verde{
+  padding: 6px 6px;
+  margin: 0 10px;
+  width: 86px;
+  height: 40px;
+  color: white;
+  font-size: 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  text-align: center;
+}
+.vermelho{
+    background-color: #FF3030;
+}
+.amarelo{
+  background-color: #FF922E;
+}
+.verde{  
+  background-color: #2FBE34;
+
+}
