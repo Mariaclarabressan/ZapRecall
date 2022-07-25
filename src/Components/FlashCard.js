@@ -55,7 +55,7 @@ function FrontCard({question , answer, color, index ,status}){
 export default function FlashCard({NumberQuestion, tap, index, clicQuestion, question, answer, status, color}){
     return(
         <>
-        {!tap ? <Card className = "card-pergunta" NumberQuestion={NumberQuestion} index = {index} clicQuestion = {clicQuestion} status = {status}/> : <FrontCard className="perguntinha" question = {question} answer = {answer} status = {status} color = {color} index = {index}   />}
+        {!tap ? <Card className = "card-pergunta" NumberQuestion={NumberQuestion} index = {index} clicQuestion = {clicQuestion} status = {status} /> : <FrontCard className="perguntinha" question = {question} answer = {answer} status = {status} color = {color} index = {index}   />}
         </>        
     )
 }

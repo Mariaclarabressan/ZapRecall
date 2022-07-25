@@ -12,14 +12,20 @@ let componentesQuestions = Issues.map(value => {
 })
 componentesQuestions = componentesQuestions.sort(() => Math.random() - 0.5)
 
-function messageResults(){
+function messageResults(results){
+    const message = results.some(value => value === 'red');
+        return (
+            <>
+                {message ? (<p>😥 Não passou</p>) : (<p>🥳 Parabéns</p>)}
+            </>
+        )
 
 }
 
 
 export default function Questions() {
     const [questions, setQuestions] = React.useState(componentesQuestions);
-    const [results, setResults] = React.useState(0);
+    const [results, setResults] = React.useState([]);
 
     function clicQuestion(indexQuestion) {
         let selectQuestion = questions.map((value, index) => {
@@ -61,10 +67,11 @@ export default function Questions() {
         })
 
         setQuestions([...selectQuestion]);
-        setResults(results +1)
+        setResults([...results, status])
         
     }
-  
+
+    
      
 
     return (
@@ -73,13 +80,15 @@ export default function Questions() {
                 {questions.map((value, index) => <FlashCard NumberQuestion={`Pergunta ${index + 1}`} tap={value.tap} index={index} clicQuestion={clicQuestion} question={value.front} answer={value.back} status={value.status} color={color} />)}
             </div>
             <div className="footer">
-                {questions.map(value =>{
+                {results.length === 8 ?  messageResults(results) : null }
+                {questions.map((value, index) =>{
                     if(value.status !== 'unclicked'){
                         return <Icon status={value.status}/>
                     }
+                    
                 })}
+                    <h1>{results.length} / {questions.length} Concluídos!</h1>
                 
-                <h1>{results} / {questions.length} Concluídos!</h1>
             </div>
             
         </>

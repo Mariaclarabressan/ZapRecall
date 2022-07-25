@@ -15,8 +15,7 @@ body{
 }
 .body-questions{
     flex-direction: column;
-    height: 400px;
-    overflow-y: scroll;
+    margin-bottom: 220px;
 }
 .Home{
     height: auto;
@@ -96,6 +95,7 @@ body{
     right: 0;
     bottom:0;
     background-color: #FFFFFF;
+    max-height: 200px;
     width: 100%;
     padding: 25px 115px;
     font-size: 18px; 
